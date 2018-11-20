@@ -8,7 +8,7 @@ const Router = () => (
   <BrowserRouter>
     <div>
       <MainNav />
-      <main>
+      <main className="main-content">
         <Route path="/" exact component={Home} />
         <Route path="/live/" component={Live} />
       </main>

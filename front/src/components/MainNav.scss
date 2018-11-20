@@ -1,5 +1,8 @@
 .main-nav {
-  box-shadow: 0 0 4px darken(#FFF, 40%);
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 0 2px darken(#FFF, 20%);
+  background: #FFF;
 
   ul {
     height: 60px;

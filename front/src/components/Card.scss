@@ -1,0 +1,27 @@
+.card {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 40px;
+  background: #FFF;
+
+  header {
+    padding: 15px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .likes {
+    margin-bottom: 10px;
+  }
+
+  .comment {
+    font-size: 14px;
+  }
+}
