@@ -1,0 +1,38 @@
+.main-nav {
+  box-shadow: 0 0 4px darken(#FFF, 40%);
+
+  ul {
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      display: block;
+
+      a {
+        display: flex;
+        height: 100%;
+        padding: 0 40px;
+        align-items: center;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 18px;
+        color: #444;
+
+        &:hover {
+          background: #FEFAE0;
+        }
+
+        &.selected {
+          background: #BC6C25;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}

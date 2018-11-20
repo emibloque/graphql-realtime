@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./MainNav.scss";
 
-export default () => (
-  <nav>
+export default (props) => (
+  <nav class="main-nav">
     <ul>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink to="/" exact activeClassName="selected">Home</NavLink>
       </li>
       <li>
-        <Link to="/live/">Live</Link>
+        <NavLink to="/live/" activeClassName="selected">Live</NavLink>
       </li>
     </ul>
   </nav>
