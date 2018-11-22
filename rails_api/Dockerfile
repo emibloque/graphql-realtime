@@ -11,4 +11,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["bundle", "exec", "rails", "server"]
+CMD ["puma"]
