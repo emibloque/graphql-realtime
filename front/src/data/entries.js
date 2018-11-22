@@ -1,5 +1,46 @@
 export default [
-  {id: 1, name: "wadus", likes: 123, image: "http://images6.fanpop.com/image/photos/40800000/Penguins-Of-Antarctica-antarctica-40869902-800-600.jpg", comments: [{author: "wadus", text: "My comment"}, {author: "wadus", text: "My comment"}]},
-  {id: 2, name: "wadus2", likes: 123, image: "http://images6.fanpop.com/image/photos/40800000/Penguins-Of-Antarctica-antarctica-40869902-800-600.jpg"},
-  {id: 3, name: "wadus3", likes: 123, image: "http://images6.fanpop.com/image/photos/40800000/Penguins-Of-Antarctica-antarctica-40869902-800-600.jpg"}
-]
+  {
+    id: 1,
+    author: {
+      name: "charlotte"
+    },
+    likes: 123,
+    image: "/images/cassidy-mills-425636-unsplash.jpg",
+    comments: [
+      { author: "charlotte", text: "Hey there!" },
+      { author: "laosemat", text: "Sunrises are always beautiful." },
+      { author: "quentin", text: "Nice shot 🔥" }
+    ]
+  },
+  {
+    id: 2,
+    author: {
+      name: "kevin"
+    },
+    likes: 123,
+    image: "/images/eamonn-maguire-57073-unsplash.jpg",
+    liked: true,
+    comments: [
+      { author: "kevin", text: "With the family." },
+      { author: "chawef23", text: "Omg" }
+    ]
+  },
+  {
+    id: 3,
+    author: {
+      name: "doris"
+    },
+    likes: 123,
+    image: "/images/ian-parker-546258-unsplash.jpg",
+    comments: [{ author: "doris", text: "Alone in the wild" }]
+  },
+  {
+    id: 4,
+    author: {
+      name: "gustavo"
+    },
+    likes: 123,
+    image: "/images/maciej-ostrowski-1133088-unsplash.jpg",
+    comments: [{ author: "gustavo", text: "Diving..." }]
+  }
+];

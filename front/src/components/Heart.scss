@@ -1,0 +1,17 @@
+.heart {
+  cursor: pointer;
+
+  svg {
+    stroke: #444;
+    max-width: 33px;
+    max-height: 30px;
+    fill: transparent;
+  }
+
+  &.active {
+    svg {
+      fill: #fe4365;
+      stroke: #fe4365;
+    }
+  }
+}
