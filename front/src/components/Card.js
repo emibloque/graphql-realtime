@@ -10,9 +10,9 @@ export default props => (
       <Heart active={props.liked} onClick={props.onToggleLike} />
       <div className="likes">{props.likes} likes</div>
       <div className="comments">
-        {props.comments.map((comment, i) => (
-          <p key={i}>
-            <strong>{comment.author}</strong> {comment.text}
+        {props.comments.map((comment) => (
+          <p key={comment.id}>
+            <strong>{comment.author.name}</strong> {comment.text}
           </p>
         ))}
       </div>
