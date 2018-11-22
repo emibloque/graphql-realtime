@@ -1,0 +1,33 @@
+version: "3"
+services:
+  rails_api:
+    build:
+      context: ./rails_api
+    volumes:
+      - ./rails_api:/app
+    ports:
+      - 8000:3000
+
+  node_api:
+    build:
+      context: ./node_api
+    volumes:
+      - ./node_api:/app
+    ports:
+      - 8080:3000
+
+  elixir_api:
+    build:
+      context: ./elixir_api
+    volumes:
+      - ./elixir_api:/app
+    ports:
+      - 8888:4000
+
+  front:
+    build:
+      context: ./front
+    volumes:
+      - ./front:/app
+    ports:
+      - 3000:3000
