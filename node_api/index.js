@@ -1,7 +1,8 @@
 const express = require("express");
+const cors = require("cors");
 const { buildSchema } = require("graphql");
 const graphqlHTTP = require("express-graphql");
-const postsList = require('./posts');
+const postsList = require("./posts");
 
 const port = 3000;
 
@@ -51,11 +52,12 @@ const root = {
       }
     }
 
-    throw Error('Post not found');
+    throw Error("Post not found");
   }
 };
 
 const app = express();
+app.use(cors());
 app.use(
   "/",
   graphqlHTTP({

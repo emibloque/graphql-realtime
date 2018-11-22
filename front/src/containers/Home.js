@@ -1,16 +1,47 @@
 import React, { Component } from "react";
-import entries from "../data/entries";
 import CardContainer from "./CardContainer";
 
-class Home extends Component {
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
+const query = gql`
+  {
+    posts {
+      id
+      image
+      author {
+        id
+        name
+      }
+      comments {
+        id
+        text
+        author {
+          id
+          name
+        }
+      }
+    }
+  }
+`;
+
+class Home extends Component {
   render() {
     return (
-      <div>
-        {entries.map((entry, i) => (
-          <CardContainer key={entry.id} toggleLike={this.toggleLike} {...entry} />
-        ))}
-      </div>
+      <Query query={query}>
+        {({ loading, error, data }) => {
+          if (loading) return <p>Loading...</p>;
+          if (error) return <p>Error :(</p>;
+
+          return data.posts.map(post => (
+            <CardContainer
+              key={post.id}
+              toggleLike={this.toggleLike}
+              {...post}
+            />
+          ));
+        }}
+      </Query>
     );
   }
 }
