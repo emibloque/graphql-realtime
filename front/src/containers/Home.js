@@ -4,11 +4,12 @@ import CardContainer from "./CardContainer";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
-const query = gql`
+const GET_POSTS = gql`
   {
     posts {
       id
       image
+      likes
       author {
         id
         name
@@ -28,7 +29,7 @@ const query = gql`
 class Home extends Component {
   render() {
     return (
-      <Query query={query}>
+      <Query query={GET_POSTS}>
         {({ loading, error, data }) => {
           if (loading) return <p>Loading...</p>;
           if (error) return <p>Error :(</p>;
@@ -36,7 +37,6 @@ class Home extends Component {
           return data.posts.map(post => (
             <CardContainer
               key={post.id}
-              toggleLike={this.toggleLike}
               {...post}
             />
           ));
