@@ -4,8 +4,8 @@ module Types
 
     def stories
       [
-        {id: 1, image: "image1"},
-        {id: 2, image: "image4"}
+        {id: 1, image: "/images/cassidy-mills-425636-unsplash.jpg"},
+        {id: 2, image: "/images/eamonn-maguire-57073-unsplash.jpg"}
       ]
     end
   end

@@ -33,9 +33,10 @@ services:
       - 3000:3000
 
   negron:
-    image: thecocktail/negron:1.0
+    image: thecocktail/negron:1.1
     restart: on-failure
     environment:
+      - NO_CORS=true
       - PROVIDER_URL_RUBY=http://rails_api:3000/graphql
       - PROVIDER_URL_NODE=http://node_api:3000/
     ports:
