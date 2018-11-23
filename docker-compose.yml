@@ -31,3 +31,15 @@ services:
       - ./front:/app
     ports:
       - 3000:3000
+
+  negron:
+    image: thecocktail/negron:1.0
+    restart: on-failure
+    environment:
+      - PROVIDER_URL_RUBY=http://rails_api:3000/graphql
+      - PROVIDER_URL_NODE=http://node_api:3000/
+    ports:
+      - 4000:3000
+    depends_on:
+      - node_api
+      - rails_api
