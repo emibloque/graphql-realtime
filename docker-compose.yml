@@ -39,8 +39,10 @@ services:
       - NO_CORS=true
       - PROVIDER_URL_RUBY=http://rails_api:3000/graphql
       - PROVIDER_URL_NODE=http://node_api:3000/
+      - PROVIDER_URL_ELIXIR=http://elixir_api:4000/
     ports:
       - 4000:3000
     depends_on:
       - node_api
       - rails_api
+      - elixir_api

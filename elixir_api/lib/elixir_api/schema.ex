@@ -29,4 +29,12 @@ defmodule ElixirApi.Schema do
       end)
     end
   end
+
+  query do
+    field :messages, list_of(:message) do
+      resolve(fn _, _ ->
+        {:ok, []}
+      end)
+    end
+  end
 end
