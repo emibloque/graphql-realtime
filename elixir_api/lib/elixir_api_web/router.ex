@@ -1,11 +1,7 @@
 defmodule ElixirApiWeb.Router do
   use ElixirApiWeb, :router
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
+  forward("/graphiql", Absinthe.Plug.GraphiQL, schema: ElixirApi.Schema)
 
-  scope "/api", ElixirApiWeb do
-    pipe_through :api
-  end
+  forward("/", Absinthe.Plug, schema: ElixirApi.Schema)
 end

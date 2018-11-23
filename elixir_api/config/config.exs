@@ -10,14 +10,17 @@ config :elixir_api, ElixirApiWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "54mtFDynOXW/gvyeSXwKAobH5CY6xmvpY7gYeU5ciLQ4p6v6ZiwQ0bd8b6xbW5Gi",
   render_errors: [view: ElixirApiWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: ElixirApi.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: ElixirApi.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
+config :my_app, ElixirApiWeb.Endpoint,
+  # ... other config
+  pubsub: [name: ElixirApi.PubSub, adapter: Phoenix.PubSub.PG2]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"

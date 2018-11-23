@@ -35,7 +35,8 @@ defmodule ElixirApi.Mixfile do
       {:phoenix, "~> 1.3.2"},
       {:phoenix_pubsub, "~> 1.0"},
       {:gettext, "~> 0.11"},
-      {:plug_cowboy, "~> 1.0"}
+      {:plug_cowboy, "~> 1.0"},
+      {:absinthe_phoenix, "~> 1.4.0"}
     ]
   end
 end
